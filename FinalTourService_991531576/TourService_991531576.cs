@@ -34,7 +34,7 @@ namespace FinalTourService_991531576
         public string Validate(string username, string pass)
         {
             User u = context.Users.Find(username);
-            if (u.Password == pass)
+            if (u != null && u.Password == pass)
             {
                 return "Login Success!";
             }
